@@ -1,0 +1,106 @@
+﻿[
+    {
+        "slug":  "ascent",
+        "en":  "Ascent",
+        "zh":  "亚海悬城",
+        "uuid":  "7eaecc1b-4337-bbf6-6ab9-04b8f06b3319",
+        "icon":  "assets/maps/ascent.png",
+        "splash":  null
+    },
+    {
+        "slug":  "split",
+        "en":  "Split",
+        "zh":  "霓虹町",
+        "uuid":  "d960549e-485c-e861-8d71-aa9d1aed12a2",
+        "icon":  "assets/maps/split.png",
+        "splash":  null
+    },
+    {
+        "slug":  "fracture",
+        "en":  "Fracture",
+        "zh":  "裂变峡谷",
+        "uuid":  "b529448b-4d60-346e-e89e-00a4c527a405",
+        "icon":  "assets/maps/fracture.png",
+        "splash":  null
+    },
+    {
+        "slug":  "bind",
+        "en":  "Bind",
+        "zh":  "源工重镇",
+        "uuid":  "2c9d57ec-4431-9c5e-2939-8f9ef6dd5cba",
+        "icon":  "assets/maps/bind.png",
+        "splash":  null
+    },
+    {
+        "slug":  "breeze",
+        "en":  "Breeze",
+        "zh":  "微风岛屿",
+        "uuid":  "2fb9a4fd-47b8-4e7d-a969-74b4046ebd53",
+        "icon":  "assets/maps/breeze.png",
+        "splash":  null
+    },
+    {
+        "slug":  "abyss",
+        "en":  "Abyss",
+        "zh":  "幽邃地窟",
+        "uuid":  "224b0a95-48b9-f703-1bd8-67aca101a61f",
+        "icon":  "assets/maps/abyss.png",
+        "splash":  null
+    },
+    {
+        "slug":  "lotus",
+        "en":  "Lotus",
+        "zh":  "莲华古城",
+        "uuid":  "2fe4ed3a-450a-948b-6d6b-e89a78e680a9",
+        "icon":  "assets/maps/lotus.png",
+        "splash":  null
+    },
+    {
+        "slug":  "sunset",
+        "en":  "Sunset",
+        "zh":  "日落之城",
+        "uuid":  "92584fbe-486a-b1b2-9faa-39b0f486b498",
+        "icon":  "assets/maps/sunset.png",
+        "splash":  null
+    },
+    {
+        "slug":  "pearl",
+        "en":  "Pearl",
+        "zh":  "深海明珠",
+        "uuid":  "fd267378-4d1d-484f-ff52-77821ed10dc2",
+        "icon":  "assets/maps/pearl.png",
+        "splash":  null
+    },
+    {
+        "slug":  "summit",
+        "en":  "Summit",
+        "zh":  "天枢云阙",
+        "uuid":  "756da597-416b-c0f2-f47b-afbdf28670bc",
+        "icon":  "assets/maps/summit.png",
+        "splash":  null
+    },
+    {
+        "slug":  "icebox",
+        "en":  "Icebox",
+        "zh":  "森寒冬港",
+        "uuid":  "e2ad5c54-4114-a870-9641-8ea21279579a",
+        "icon":  "assets/maps/icebox.png",
+        "splash":  null
+    },
+    {
+        "slug":  "corrode",
+        "en":  "Corrode",
+        "zh":  "盐海矿镇",
+        "uuid":  "1c18ab1f-420d-0d8b-71d0-77ad3c439115",
+        "icon":  "assets/maps/corrode.png",
+        "splash":  null
+    },
+    {
+        "slug":  "haven",
+        "en":  "Haven",
+        "zh":  "隐世修所",
+        "uuid":  "2bee0dc9-4ffe-519b-1cbd-7fbe763a6047",
+        "icon":  "assets/maps/haven.png",
+        "splash":  null
+    }
+]

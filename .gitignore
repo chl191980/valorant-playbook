@@ -1,0 +1,24 @@
+# 依赖（本项目运行时零依赖，这里只是预防）
+node_modules/
+package-lock.json
+
+# 操作系统 / 编辑器杂项
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 无头验证的临时产物（保留 contact.html / contact.png 等正式 QC 件）
+_shot/profile/
+_shot/tmp*.png
+
+# 误删恢复的临时目录
+_recover/
+
+# 就地改数据前的备份
+_bak/
+
+# nudge.js / voidcheck.js �ܳ�������ʱ����
+tools/_fix*.json
+tools/_nudge*.json

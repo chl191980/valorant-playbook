@@ -1,0 +1,37 @@
+MIT License
+
+Copyright (c) 2026 Valorant Playbook contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON GAME ASSETS / 关于游戏素材
+
+The MIT license above covers this project's own source code and its compiled
+lineup/strategy data. It does NOT cover the game artwork bundled under
+`assets/` (map minimaps, agent portraits, ability icons) or the metadata
+derived from Riot's public API. Those remain the property of Riot Games, Inc.
+and are included here solely to make this unofficial, non-commercial fan
+reference work. See the "素材与免责声明" section of README.md.
+
+上述 MIT 许可仅覆盖本项目自己的源代码与整理出的点位/打法数据，**不覆盖**
+`assets/` 下的游戏美术素材（小地图、特工头像、技能图标）以及来自 Riot 公开
+API 的元数据 —— 这些版权归 Riot Games, Inc. 所有，此处仅用于呈现这个非官方、
+非商业的粉丝向参考资料。详见 README.md 的「素材与免责声明」。

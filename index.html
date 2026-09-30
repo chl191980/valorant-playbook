@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>无畏契约 · 战术板 | VALORANT Playbook</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="mark"></span>
+    <div>
+      <h1>无畏契约 <em>战术板</em></h1>
+      <p>VALORANT PLAYBOOK · 道具点位 &amp; 职业打法</p>
+    </div>
+  </div>
+
+  <div class="map-head">
+    <h2 id="mapTitle">—</h2>
+    <p id="mapOverview"></p>
+  </div>
+
+  <div class="topbar-actions">
+    <button id="btnExportPng" class="btn ghost" title="把当前战术板导出为图片">导出图片</button>
+    <button id="btnExportJson" class="btn ghost" title="导出你自己的点位">导出 JSON</button>
+    <label class="btn ghost file-btn" title="导入你保存的 JSON">
+      导入 JSON<input type="file" id="importFile" accept=".json" hidden />
+    </label>
+    <button id="btnEdit" class="btn">✎ 编辑模式</button>
+  </div>
+</header>
+
+<main class="layout">
+
+  <!-- ───────── 左：地图列表 ───────── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="side-head">
+      <h3>地图</h3>
+      <input id="mapSearch" type="search" placeholder="搜索地图…" />
+    </div>
+    <ul id="mapList" class="map-list"></ul>
+    <div class="side-foot">
+      <div class="legend" id="legend"></div>
+      <p class="credit">
+        地图 / 特工素材来自
+        <a href="https://valorant-api.com" target="_blank" rel="noreferrer">valorant-api.com</a>；
+        点位与打法为战术整理，仅供学习参考。
+      </p>
+    </div>
+  </aside>
+
+  <!-- ───────── 中：战术板 ───────── -->
+  <section class="stage">
+    <div class="toolbar">
+      <div class="seg" id="sideFilter">
+        <button data-side="all" class="on">全部</button>
+        <button data-side="attack">进攻方</button>
+        <button data-side="defense">防守方</button>
+      </div>
+
+      <div class="tool-toggles">
+        <label class="chk"><input type="checkbox" id="tgRadius" checked /><span>作用范围</span></label>
+        <label class="chk"><input type="checkbox" id="tgArrows" checked /><span>站位连线</span></label>
+        <label class="chk"><input type="checkbox" id="tgLabels" checked /><span>标签</span></label>
+        <label class="chk"><input type="checkbox" id="tgCallouts" /><span>地名</span></label>
+      </div>
+
+      <div class="spacer"></div>
+
+      <button id="btnClearSel" class="btn ghost small">清除选择</button>
+      <button id="btnReset" class="btn ghost small danger">恢复默认</button>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board" id="board">
+        <img id="mapImg" alt="地图" draggable="false" />
+        <svg class="overlay" id="overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+        <div class="callouts" id="callouts"></div>
+        <div class="markers" id="markers"></div>
+        <div class="hint" id="boardHint">点击地图上的标记查看「站位 → 瞄准 → 落点」</div>
+      </div>
+    </div>
+
+    <!-- 编辑模式调色板 -->
+    <div class="palette" id="palette" hidden>
+      <div class="palette-row">
+        <span class="palette-label">特工</span>
+        <div class="agent-strip" id="agentStrip"></div>
+      </div>
+      <div class="palette-row">
+        <span class="palette-label">道具</span>
+        <div class="ability-strip" id="abilityStrip"></div>
+      </div>
+      <p class="palette-tip">
+        编辑模式：在地图上<b>点击空白处</b>新增点位 · <b>拖动</b>移动点位 · 选中后按 <kbd>Delete</kbd> 删除 · 修改会自动保存在本地浏览器
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────── 右：点位 / 打法 ───────── -->
+  <aside class="inspector">
+    <div class="tabs" id="tabs">
+      <button data-tab="markers" class="on">道具点位 <b id="cntMarkers">0</b></button>
+      <button data-tab="strats">职业打法 <b id="cntStrats">0</b></button>
+    </div>
+
+    <div class="tab-body" id="tabMarkers">
+      <div class="filters">
+        <div class="filter-head">
+          <span>按特工过滤</span>
+          <button id="btnAllAgents" class="link">全选</button>
+        </div>
+        <div class="agent-filter" id="agentFilter"></div>
+      </div>
+      <ul class="marker-list" id="markerList"></ul>
+    </div>
+
+    <div class="tab-body" id="tabStrats" hidden>
+      <ul class="strat-list" id="stratList"></ul>
+    </div>
+
+    <div class="detail" id="detail" hidden></div>
+  </aside>
+
+</main>
+
+<img id="pngLoader" alt="" hidden />
+
+<script src="data/core.js"></script>
+<script src="data/callouts.js"></script>
+<script src="data/tactics/ascent.js"></script>
+<script src="data/tactics/split.js"></script>
+<script src="data/tactics/haven.js"></script>
+<script src="data/tactics/bind.js"></script>
+<script src="data/tactics/sunset.js"></script>
+<script src="data/tactics/lotus.js"></script>
+<script src="data/tactics/pearl.js"></script>
+<script src="data/tactics/icebox.js"></script>
+<script src="data/tactics/breeze.js"></script>
+<script src="data/tactics/fracture.js"></script>
+<script src="data/tactics/abyss.js"></script>
+<script src="data/tactics/summit.js"></script>
+<script src="data/tactics/corrode.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
