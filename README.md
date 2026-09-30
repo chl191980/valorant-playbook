@@ -3,6 +3,8 @@
 一个纯静态的《无畏契约》地图道具/战术部署网页：**选图 → 看点位 → 照着投**。
 每张图都有进攻/防守两套道具点位（含「站哪 → 看哪 → 怎么投」的完整说明）和 5–6 套职业打法（阵容 + 时间轴 + 提示）。
 
+### 🎯 直接在线使用：<https://chl191980.github.io/valorant-playbook/>
+
 ![界面预览](_shot/home.png)
 
 ## 快速开始
@@ -17,11 +19,13 @@ node tools/serve.js            # 默认 http://127.0.0.1:8099/
 
 ## 在线使用（GitHub Pages）
 
-仓库已经按 GitHub Pages 的静态托管要求准备好：根目录就是站点根，**没有构建步骤**，把 `main` 分支的 `/` 设为 Pages 源即可上线。
+仓库已经按 GitHub Pages 的静态托管要求准备好：根目录就是站点根，**没有构建步骤**。
 
-- 线上地址：`https://<你的用户名>.github.io/<仓库名>/`
+- 线上地址：**<https://chl191980.github.io/valorant-playbook/>**（已开启 Pages，源 = `main` 分支 `/`）
 - 纯静态，图片和 13 张地图都是相对路径，无需任何配置。
 - `.nojekyll` 已就位（否则 Jekyll 会忽略 `_grid/`、`_shot/` 这类下划线开头的目录）。
+
+Fork 到自己的账号后，把仓库 Settings → Pages 的 Source 设为 `main` / `/`，即可得到 `https://<你的用户名>.github.io/valorant-playbook/`。
 
 ### 怎么一起改点位？
 
